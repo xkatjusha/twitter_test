@@ -1,0 +1,49 @@
+.grid-containerresponse {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    background-color: white;
+    border : 1px white solid;
+    height: 150px;
+    width: 400px;
+  }
+  .avatar_response {
+    grid-column: 1 ;
+    grid-row: 1;
+    background-color: black;
+    border: white 1px solid;
+    align-items: center;
+    margin: auto;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+  }
+  .nickname_response {
+    grid-column: 2 / 6;
+    grid-row: 1 ;
+    background-color: white;
+    border: white 1px solid;
+    align-items: center;
+  }
+  .nicknameresponse{
+    border: white 1px solid;
+    height: 45px;
+    font-family: Arial;
+    font-size: 25px;
+    text-align: left;
+    vertical-align:bottom;
+  }
+  .status_response {
+    grid-column: 2 / 6;
+    grid-row: 2 / 5;
+    background-color: white;
+    border: white 1px solid;
+  }
+  .textarea2{
+    height: 60px;
+    width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: white 1px solid;
+}

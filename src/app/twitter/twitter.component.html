@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <div class="grid-container">
+      <div class="avatar">
+        pic
+      </div>
+      <div class="nickname">
+        <input type="text" placeholder="Nickname" name="nickname" #newnickname>
+      </div>
+      <div class="status">
+        <textarea name="status" placeholder="Status"  #newstatus></textarea>
+      </div>
+      <div class="posten">
+        <button (click)="posten()">
+          Posten
+        </button>
+      </div>
+    </div>
+    <br>
+  </tr>
+  <tr>
+    <app-savedPosts [postData]="post" *ngFor="let post of postingService.postList">
+    </app-savedPosts>
+  </tr>
+</table>

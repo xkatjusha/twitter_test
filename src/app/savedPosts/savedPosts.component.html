@@ -1,0 +1,62 @@
+<table>
+  <tr>
+    <div class="grid-container">
+      <div class="avatar">
+        pic
+      </div>
+      <div class="nickname">
+        <output>{{postData.nickname}}</output>
+      </div>
+      <div class="status">
+        <output class="textarea1">{{postData.status}}</output>
+      </div>
+      <div class="openclose">
+        <div *ngIf="showmore===false" (click)="more()">
+          🔻
+        </div>
+        <div *ngIf="showmore===true" (click)="less()">
+          🔺
+        </div>
+      </div>
+      <div class="heart">
+        <div *ngIf="showmlike===false" (click)="addlike()">
+          🤍
+        </div>
+        <div *ngIf="showmlike===true" (click)="sublike()">
+          💗
+        </div>
+        {{likenumber}}
+      </div>
+      <div class="comment">
+        <div (click)="reply()">🗨️
+          <br>
+          {{postData.answers.length}}
+        </div>
+      </div>
+    </div>
+    <!---->
+    <div *ngIf="showmore===true">
+    <app-response [answerData]="answer" *ngFor="let answer of postData.answers" >
+    </app-response>
+  </div>
+    <!---->
+    <div class="grid-containerresponse" *ngIf="commentary">
+      <div class="avatar_response">
+        pic
+      </div>
+      <div class="nickname_response">
+        <input type="text" placeholder="Nickname" name="nickname" #newnicknameresponse>
+      </div>
+      <div class="status_response">
+        <textarea class="textarea2" name="statusresponse" placeholder="Status"  #newstatusresponse></textarea>
+      </div>
+      <div class="post_response">
+        <button class="posten" (click)="postenresponse()">
+          Posten
+        </button>
+      </div>
+    </div>
+  </tr>
+  <tr>
+  </tr>
+</table>

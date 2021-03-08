@@ -1,0 +1,49 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    background-color: white;
+    border : 1px white solid;
+    height: 200px;
+    width: 400px;
+    border-radius:10%;
+  }
+  .avatar {
+    grid-column: 1 ;
+    grid-row: 1;
+    background-color: black;
+    border: white 1px solid;
+    align-items: center;
+    margin: auto;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+  }
+  .nickname {
+    grid-column: 2 / 6;
+    grid-row: 1 ;
+    background-color: transparent;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .status {
+    grid-column: 1 / 6;
+    grid-row: 2 / 5;
+    background-color: transparent;
+    border: white 1px solid;
+  }
+  textarea{
+      height: 100px;
+      width: 350px;
+      background-color: transparent;
+  }
+  .posten {
+    grid-column: 4;
+    grid-row: 5;
+    background-color: transparent;
+    border-radius:10%;
+  }
+  button {
+    background-color: Azure;
+  }
